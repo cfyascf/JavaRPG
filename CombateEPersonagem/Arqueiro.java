@@ -1,3 +1,5 @@
+package CombateEPersonagem;
+
 public class Arqueiro extends Personagem{
     //lista de itens arqueiro
     public void Suprema(inimigo){

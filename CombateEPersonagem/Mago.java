@@ -1,3 +1,4 @@
+package CombateEPersonagem;
 public class Mago extends Personagem {
     //lista de itens mago
 
