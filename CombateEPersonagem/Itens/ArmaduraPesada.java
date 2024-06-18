@@ -1,15 +1,13 @@
-package itens;
+package CombateEPersonagem.Itens;
 
-public class MantoSagrado extends Item
+public class ArmaduraPesada extends Item
 {
-    private int manaRecuperada; 
     private int aumentoDefesa;
 
-    public MantoSagrado()
+    public ArmaduraPesada()
     {
-        super(new Mago());
+        super(new Guerreiro());
         this.aumentoDefesa = 2;
-        this.manaRecuperada = 10; //mudar conforme for feito o sistema de mana
     }
 
     @Override
@@ -17,7 +15,6 @@ public class MantoSagrado extends Item
     {
         if(this.Usuario == usuario)
         {
-            usuario.Mana += manaRecuperada;
             usuario.classeDeArmaduraPersonagem += aumentoDefesa;
             System.out.println("Item utilizado com sucesso");
         }

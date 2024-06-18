@@ -1,4 +1,4 @@
-package itens;
+package CombateEPersonagem.Itens;
 
 public abstract class Item 
 {

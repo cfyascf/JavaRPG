@@ -1,13 +1,13 @@
-package itens;
+package CombateEPersonagem.Itens;
 
-public class CapaSombria extends Item
+public class ArcoNegro extends Item
 {
-    private int aumentoDefesa;
+    private int danoAumentado;
 
-    public CapaSombria()
+    public ArcoNegro()
     {
-        super(new Ladino());
-        this.aumentoDefesa = 2;
+        super(new Arqueiro());
+        this.danoAumentado = 1;
     }
 
     @Override
@@ -15,7 +15,7 @@ public class CapaSombria extends Item
     {
         if(this.Usuario == usuario)
         {
-            usuario.classeDeArmaduraPersonagem += aumentoDefesa;
+            usuario.modificadorAtaquePersonagem += danoAumentado;
             System.out.println("Item utilizado com sucesso");
         }
         else
