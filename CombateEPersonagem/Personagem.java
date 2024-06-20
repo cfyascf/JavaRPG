@@ -1,5 +1,9 @@
 package CombateEPersonagem;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
+
+import CombateEPersonagem.Itens.Item;
 
 public class Personagem {
    
@@ -8,7 +12,8 @@ public class Personagem {
     int modificadorAtaquePersonagem = 2;
     int classeDeArmaduraPersonagem = 15;
     int danoPersonagem;
-    //lista itens
+    
+    List<Item> listaDeItens = new ArrayList<>();
     
     public Personagem() {
     }
@@ -83,6 +88,10 @@ public class Personagem {
         }
     }
     */
+
+
+
+
 }
 
 
