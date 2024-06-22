@@ -36,9 +36,7 @@ public abstract class Monstros {
     public void aumentarNivelMostro(){
         this.nivelMonstro += 1;
         this.vidaMonstro += 5;
-        this.armaduraMostro +=5;
         this.danoAtaque +=2;
-        this.modificadorAtaque +=2;
     }
 
     public abstract void ataque();
