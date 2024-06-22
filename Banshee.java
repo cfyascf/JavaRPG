@@ -1,10 +1,11 @@
 public class Banshee extends Monstros{
     Banshee(){
         this.descricao = "Um espírito maligno morto-vivo, a Banshee é uma ex-elfa que sai à noite para assombrar criaturas vivas que ousam invadir seu território.";
-        this.nomeAtaque = "Lamento de cicatrizes";
-        this.danoAtaque = 6;
-        this.vida = 10;
-        this.escudo = 15;
+        this.danoAtaque = 2;
+        this.vidaMonstro = 10;
+        this.armaduraMostro = 2;
+        this.nivelMonstro = 1;
+        this.modificadorAtaque = 3;
     }
 
     @Override
