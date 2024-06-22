@@ -1,23 +1,37 @@
 public class Dragon extends Monstros{
 
     Dragon(){
-        this.descricao ="Um dos tipos de dragões mais difíceis de enfrentar é o Dragão das Sombras.Esses monstros nasceram no Pendor das Sombras ou se transformaram depois de viver em condições horríveis.";
-        this.nomeAtaque = "Bafo Flamejante";
-        this.danoAtaque = 20;
-        this.vida = 30;
-        this.escudo = 20;
+        this.descricao ="Dragão são figuras lendárias, representadas por grandes répteis monstruosos que possuem a capacidade de voar e soltar fogo pela boca.";
+        this.danoAtaque = 5;
+        this.vidaMonstro = 20;
+        this.armaduraMostro = 5;
+        this.nivelMonstro = 1;
+        this.modificadorAtaque = 5;
     }
 
     @Override
     public void ataque() {
         int dado = numeroAleatorio();
-        if( dado > 18){
-            System.out.println("ACERTO CRITICO DANO EM AREA E ESTaTUS QUEIMADO");
-        }else if (dado > 8){
-            System.out.println("ACERTO!");
+        if(numeroAleatorio()>10){
+            System.err.println("O DRAGÂO USA O ATAQUE BAFO FLAMEJANTE");
+            if( dado > 18){
+                System.out.println("ACERTO CRITICO! Dano causado: "+danoAtaque*2+(numeroAleatorio()%modificadorAtaque));
+            }else if (dado > 8){
+                System.out.println("ACERTO! Dano causado: "+danoAtaque+(numeroAleatorio()%modificadorAtaque));
+            }else{
+                System.out.println("ERROU!");
+            }
         }else{
-            System.out.println("ERROU");
+            System.err.println("O DRAGÂO USA O ATAQUE GARRAS AFIADAS");
+            if( dado > 18){
+                System.out.println("ACERTO CRITICO! Dano causado:  "+danoAtaque*1.5 + ((numeroAleatorio()%modificadorAtaque)));
+            }else if (dado > 8){
+                System.out.println("ACERTO! Dano causado: "+danoAtaque + (numeroAleatorio()%modificadorAtaque-1));
+            }else{
+                System.out.println("ERROU!");
+            }
         }
+
     }
     
 }
