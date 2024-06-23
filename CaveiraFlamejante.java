@@ -1,27 +1,27 @@
-public class Banshee extends Monstros{
-    Banshee(){
-        this.descricao = "Um espírito maligno morto-vivo, a Banshee é uma ex-elfa que sai à noite para assombrar criaturas vivas que ousam invadir seu território.";
-        this.danoAtaque = 5;
-        this.vidaMonstro = 30;
-        this.armaduraMostro = 3;
+public class CaveiraFlamejante extends Monstros{
+    CaveiraFlamejante(){
+        this.descricao = "Uma criatura que pode ser o combustível do pesadelo para muitas pessoas por aí, a Caveira Flamejante é o produto de conjuradores das trevas usando os ossos de magos mortos.";
+        this.danoAtaque = 2;
+        this.vidaMonstro = 10;
+        this.armaduraMostro = 1;
         this.nivelMonstro = 1;
-        this.modificadorAtaque = 6;
+        this.modificadorAtaque = 3;
     }
 
     @Override
     public void ataque() {
         int dado = numeroAleatorio();
         if(numeroAleatorio()>10){
-            System.err.println("Banshee usa Lamento de cicratrizes");
+            System.err.println("Caveira flamejante usa raio de fogo");
             if( dado > 18){
                 System.out.println("ACERTO CRITICO! Dano causado: "+(danoAtaque*2+(numeroAleatorio()%modificadorAtaque)));
             }else if (dado > 8){
                 System.out.println("ACERTO! Dano causado:"+(danoAtaque+(numeroAleatorio()%modificadorAtaque)));
             }else{
                 System.out.println("ERROU!");
-            } 
+            }
         }else{
-            System.err.println("Banshee usa Toque Corruptivo");
+            System.err.println("Caveira flamejante usa bola de fogo");
             if( dado > 18){
                 System.out.println("ACERTO CRITICO! Dano causado: "+(danoAtaque*1.5+(numeroAleatorio()%modificadorAtaque)));
             }else if (dado > 8){
@@ -30,6 +30,5 @@ public class Banshee extends Monstros{
                 System.out.println("ERROU!");
             }
         }
-        
     }
 }
