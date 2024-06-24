@@ -1,3 +1,5 @@
+package CombateEPersonagem;
+
 import java.util.Random;
 public abstract class Monstros {
     protected int nivelMonstro;
