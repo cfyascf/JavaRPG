@@ -1,12 +1,9 @@
 package CombateEPersonagem;
 public class Mago extends Personagem {
-    //lista de itens mago
 
-    public void Suprema(inimigo){
-        int ataque = numeroAleatorio() + getModificadorAtaquePersonagem() + 2;
-
-        
-
+    public Mago(String nome) {
+        super(nome);
+        this.fraseSuprema = "O "+ this.nomePersonagem +" invoca um meteoro dos céus e atinge o inimigo com um ataque poderoso,";
     }
 
 }

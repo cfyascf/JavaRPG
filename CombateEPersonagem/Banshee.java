@@ -1,6 +1,8 @@
+package CombateEPersonagem;
+
 public class Banshee extends Monstros{
     Banshee(){
-        this.descricao = "Um espírito maligno morto-vivo, a Banshee é uma ex-elfa que sai à noite para assombrar criaturas vivas que ousam invadir seu território.";
+        this.descricao = "Um espírito maligno morto-vivo, a CombateEPersonagem.Banshee é uma ex-elfa que sai à noite para assombrar criaturas vivas que ousam invadir seu território.";
         this.danoAtaque = 5;
         this.vidaMonstro = 30;
         this.armaduraMostro = 3;
@@ -12,7 +14,7 @@ public class Banshee extends Monstros{
     public void ataque() {
         int dado = numeroAleatorio();
         if(numeroAleatorio()>10){
-            System.err.println("Banshee usa Lamento de cicratrizes");
+            System.err.println("CombateEPersonagem.Banshee usa Lamento de cicratrizes");
             if( dado > 18){
                 System.out.println("ACERTO CRITICO! Dano causado: "+(danoAtaque*2+(numeroAleatorio()%modificadorAtaque)));
             }else if (dado > 8){
@@ -21,7 +23,7 @@ public class Banshee extends Monstros{
                 System.out.println("ERROU!");
             } 
         }else{
-            System.err.println("Banshee usa Toque Corruptivo");
+            System.err.println("CombateEPersonagem.Banshee usa Toque Corruptivo");
             if( dado > 18){
                 System.out.println("ACERTO CRITICO! Dano causado: "+(danoAtaque*1.5+(numeroAleatorio()%modificadorAtaque)));
             }else if (dado > 8){

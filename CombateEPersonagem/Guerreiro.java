@@ -1,20 +1,7 @@
 package CombateEPersonagem;
 public class Guerreiro extends Personagem {
-
-    //lista de itens guerreiro
-
-    public void SupremaGuerreiro(inimigo){
-        int ataque = numeroAleatorio() + getModificadorAtaquePersonagem() + 2;
-
-        if(ataque > inimigo.getClasseDeArmadura()) {
-            inimigo.setInimigoVida(inimigo.getInimigoVida -= (this.danoPersonagem * 2));
-            System.out.println("ACERTOU!");
-            System.out.println("O Guerreiro carrega e executa um golpe devastador causando"+ (danoPersonagem*2) + "de dano");
-        }
-        else {
-            System.out.println("ERROU!");
-        }
-
+    public Guerreiro(String nome) {
+        super(nome);
+        this.fraseSuprema = "O"+ this.nomePersonagem+" carrega um poderoso ataque pesado e atinge o inimigo,";
     }
-
 }
