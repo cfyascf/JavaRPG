@@ -2,6 +2,8 @@ package jogo.personagens.monstros;
 
 import java.util.Random;
 
+import jogo.personagens.herois.Personagem;
+
 public abstract class Monstros {
     protected int nivelMonstro;
     protected  int vidaMonstro;
@@ -42,7 +44,7 @@ public abstract class Monstros {
         this.danoAtaque +=2;
     }
 
-    public abstract void ataque();
+    public abstract void ataque(Personagem personagem);
 
     public String getDescricao() {
         return descricao;

@@ -2,6 +2,8 @@ package jogo.quests;
 
 import java.util.Random;
 
+import jogo.personagens.herois.Personagem;
+
 public class AcoesDialogo implements AcoesLevel {
     DialogoRecord dialogo;
 
@@ -10,7 +12,7 @@ public class AcoesDialogo implements AcoesLevel {
     }
 
     @Override
-    public void executar(/*Character list*/) {
+    public void executar(Personagem personagem) {
         switch (dialogo.tipo()) {
             case Narrador:
                 System.out.println("Narrador: " + dialogo.texto());
@@ -31,5 +33,5 @@ public class AcoesDialogo implements AcoesLevel {
         }
     }
 
-    record DialogoRecord(String texto, DialogoTipo tipo) {}    
+    static record DialogoRecord(String texto, DialogoTipo tipo) {}    
 }

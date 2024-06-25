@@ -1,6 +1,7 @@
 package jogo.quests;
 
 
+import jogo.combate.Combate;
 import jogo.personagens.herois.Personagem;
 
 public class AcoesCombate implements AcoesLevel {
@@ -12,8 +13,9 @@ public class AcoesCombate implements AcoesLevel {
     }
 
     @Override
-    public void executar() {
-        
+    public void executar(Personagem personagem) {
+        Combate combate = new Combate();
+        combate.round(personagem, null);
     }
     
 }

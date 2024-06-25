@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import jogo.personagens.herois.Personagem;
+
 public class CidadeAssombrada extends Quest {
     static List<Levels> levels = new ArrayList<>();
 
@@ -52,7 +54,7 @@ public class CidadeAssombrada extends Quest {
         levels.add(nivel3);
     }
 
-    public CidadeAssombrada(List<Levels> niveisQuest) {
-        super(niveisQuest);
+    public CidadeAssombrada(List<Levels> niveisQuest, Personagem personagem) {
+        super(niveisQuest, personagem);
     }
 }

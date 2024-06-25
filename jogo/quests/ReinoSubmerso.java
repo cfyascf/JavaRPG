@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import jogo.personagens.herois.Personagem;
+
 public class ReinoSubmerso extends Quest {
     static List<Levels> levels = new ArrayList<>();
 
@@ -52,7 +54,7 @@ public class ReinoSubmerso extends Quest {
         levels.add(nivel3);
     }
 
-    public ReinoSubmerso(List<Levels> niveisQuest) {
-        super(niveisQuest);
+    public ReinoSubmerso(List<Levels> niveisQuest, Personagem personagem) {
+        super(niveisQuest, personagem);
     }
 }

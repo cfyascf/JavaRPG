@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import jogo.personagens.herois.Personagem;
+
 public class FlorestaProibida extends Quest {
     static List<Levels> levels = new ArrayList<>();
 
@@ -66,7 +68,7 @@ public class FlorestaProibida extends Quest {
         levels.add(nivel3);
     }
 
-    public FlorestaProibida(List<Levels> niveisQuest) {
-        super(niveisQuest);
+    public FlorestaProibida(List<Levels> niveisQuest, Personagem personagem) {
+        super(niveisQuest, personagem);
     }
 }

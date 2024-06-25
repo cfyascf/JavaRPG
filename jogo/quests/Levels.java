@@ -13,7 +13,7 @@ public class Levels {
         iterator = this.acoes.iterator();
     }
 
-    boolean proximaAcao() {
+    public boolean proximaAcao() {
         if (!iterator.hasNext()) {
             return false;
         }
