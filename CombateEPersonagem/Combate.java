@@ -7,15 +7,22 @@ import java.util.Scanner;
 
 public class Combate {
     
-    int round;
-    int cargaSuprema;
-    Scanner scanner = new Scanner(System.in);
+    static int round;
+    static int cargaSuprema;
+    static Scanner scanner = new Scanner(System.in);
 
-    public void iniciarCombate(Personagem personagem, Monstros inimigo) {
-        
+    public static void iniciarCombate(Personagem personagem, Monstros inimigo) {
+        cargaSuprema = 0;
         while(personagem.getVidaPersonagem() > 0 && inimigo.getVidaMonstro() > 0) {
             
             if(round % 2 == 0){
+                System.out.println("Vida "+ personagem.nomePersonagem +": "+ personagem.getVidaPersonagem());
+                System.out.println("Carga da suprema: "+cargaSuprema);
+
+                System.out.println();
+
+                System.out.println("Vida do inimigo: "+ inimigo.getVidaMonstro());
+
                 System.out.println("Escolha uma opção:");
                 System.out.println("1. Atacar");
                 System.out.println("2. Suprema");
@@ -23,40 +30,47 @@ public class Combate {
                 System.out.println("4. Fugir");
                 System.out.print("Digite sua escolha: ");
                 
-                int choice = scanner.nextInt();
+                int escolha = scanner.nextInt();
 
-                switch (choice) {
+                switch (escolha) {
                     case 1:
                         System.out.println("Você escolheu Atacar!");
-                        
-                        personagem.atacar(inimigo);
+                        personagem.ataque(inimigo);
+                        cargaSuprema++;
+                        round++;
                         break;
                     case 2:
-                        
-                        if()    
-                    
-                        System.out.println("Você escolheu Suprema!");
-                        
-                        personagem.Suprema(inimigo);
-                        break;
+
+                        if(cargaSuprema == 5){
+                            System.out.println("Você escolheu Suprema!");
+                            personagem.Suprema(inimigo);
+                            round++;
+                            break;
+                        }
+                        else {
+                            System.out.println("Você não pode usar a Suprema ainda!");
+                            continue;
+                        }
+
                     case 3:
-                        System.out.println("Você escolheu Curar!");
+                        /*System.out.println("Você escolheu Curar!");
                         
-                        //personagem.curar();
+                        personagem.curarPersonagem(personagem);
+                        round++;
+
+                         */
                         break;
                     case 4:
                         System.out.println("Você escolheu Fugir!");
-                        
                         return;
                     default:
                         System.out.println("Escolha inválida. Por favor, tente novamente.");
-                        break;
+                        continue;
                 }
+            } else if (round % 2 == 1) {
+                inimigo.ataque(personagem);
             }
 
-
-
-            System.out.println();
         }
 
         

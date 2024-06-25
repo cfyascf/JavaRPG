@@ -1,5 +1,6 @@
 package CombateEPersonagem;
 import CombateEPersonagem.Itens.Item;
+import CombateEPersonagem.Itens.Pocao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +10,7 @@ public class Personagem {
    
     String nomePersonagem;
     int nivelPersonagem = 1;
-    int vidaPersonagem = 10;
+    public int vidaPersonagem = 10;
     int modificadorAtaquePersonagem = 2;
     int classeDeArmaduraPersonagem = 15;
     int danoPersonagem;
@@ -110,8 +111,25 @@ public class Personagem {
         }
 
     }
+    /*public void curarPersonagem(Personagem personagem){
+        Pocao pocaoParaUsar = null;
 
 
+        for (Object item : personagem.listaDeItens) {
+            if (item instanceof Pocao) {
+                pocaoParaUsar = (Pocao) item;
+                break;
+            }
+        }
+
+        if (pocaoParaUsar != null) {
+            pocaoParaUsar.Usar(personagem);
+            listaDeItens.remove(pocaoParaUsar);
+        } else {
+            System.out.println("Você não possui nenhuma poção.");
+        }
+    }
+    */
 
 
 }
