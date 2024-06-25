@@ -1,6 +1,8 @@
 package CombateEPersonagem.Itens;
 
-public abstract class Item 
+import CombateEPersonagem.Personagem;
+
+public abstract class Item
 {
     public Personagem Usuario;
     
