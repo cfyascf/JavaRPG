@@ -1,11 +1,11 @@
 package CombateEPersonagem.Itens;
 
-public class AdagaEnvenenada extends Item
+public class FacaArremesso extends Item
 {
     private int aumentoModAtaque;
     private int aumentoDano;
 
-    public AdagaEnvenenada()
+    public FacaArremesso()
     {
         this.aumentoModAtaque = 2;
         this.aumentoDano = 2;
@@ -16,6 +16,6 @@ public class AdagaEnvenenada extends Item
     {
         usuario.modificadorAtaquePersonagem += this.aumentoModAtaque;
         usuario.danoPersonagem += this.aumentoDano;
-        System.out.println("Ele equipa uma adaga envenenada, seu dano aumentou consideravelmente.");
+        System.out.println("Ele obtém facas de arremesso, seu dano aumentou.");
     }
 }

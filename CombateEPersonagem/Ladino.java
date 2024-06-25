@@ -1,9 +1,12 @@
 package CombateEPersonagem;
 public class Ladino extends Personagem {
-    //lista de itens ladino
-    //adagaEnvenenada
-    
-
+    public Ladino()
+    {
+        this.itens.add(new AdagaEnvenenada());
+        this.itens.add(new BrincoFurtivo());
+        this.itens.add(new CapaSombria());
+        this.itens.add(new FacaArremesso());
+    }
     public void Suprema(inimigo){
         int ataque = numeroAleatorio() + getModificadorAtaquePersonagem() + 2;
 
