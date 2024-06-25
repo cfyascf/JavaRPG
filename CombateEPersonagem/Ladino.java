@@ -1,6 +1,8 @@
 package CombateEPersonagem;
 public class Ladino extends Personagem {
     //lista de itens ladino
+    //adagaEnvenenada
+    
 
     public void Suprema(inimigo){
         int ataque = numeroAleatorio() + getModificadorAtaquePersonagem() + 2;
