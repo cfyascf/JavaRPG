@@ -1,12 +1,12 @@
 package CombateEPersonagem;
 public class Guerreiro extends Personagem {
     public Guerreiro()
-        {
-            this.itens.add(new EspadaLendaria());
-            this.itens.add(new EspadaLeve());
-            this.itens.add(new ArmaduraPesada());
-            this.itens.add(new ArmaduraCouro());
-        }
+    {
+        this.itens.add(new EspadaLendaria());
+        this.itens.add(new EspadaLeve());
+        this.itens.add(new ArmaduraPesada());
+        this.itens.add(new ArmaduraCouro());
+    }
 
     public void SupremaGuerreiro(inimigo){
         int ataque = numeroAleatorio() + getModificadorAtaquePersonagem() + 2;

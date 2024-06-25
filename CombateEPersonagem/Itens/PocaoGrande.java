@@ -1,18 +1,18 @@
 package CombateEPersonagem.Itens;
 
-public class Pocao extends Item
+public class PocaoGrande extends Item
 {
     private int aumentoVida;
 
-    public Pocao()
+    public PocaoGrande()
     {
-        this.aumentoVida = 2;
+        this.aumentoVida = 4;
     }
 
     @Override
     public void Usar(Personagem usuario)
     {
         usuario.vidaPersonagem += this.aumentoVida;
-        System.out.println("Poção tomada, energia restaurada.");
+        System.out.println("Ele tomou uma poção grande, muita energia foi recuperada.");
     }
 }
