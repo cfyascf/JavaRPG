@@ -1,18 +1,18 @@
 package CombateEPersonagem.Itens;
 
-public class CapaSombria extends Item
+public class BrincoFurtivo extends Item
 {
     private int aumentoDefesa;
 
-    public CapaSombria()
+    public BrincoFurtivo()
     {
-        this.aumentoDefesa = 4;
+        this.aumentoDefesa = 2;
     }
 
     @Override
     public void Usar(Personagem usuario)
     {
         usuario.classeDeArmaduraPersonagem += this.aumentoDefesa;
-        System.out.println("Ele equipa uma capa sombria, com isso sua defesa aumenta consideravelmente.");
+        System.out.println("Ele equipa um brinco da furtividade, com isso sua defesa aumenta.");
     }
 }
