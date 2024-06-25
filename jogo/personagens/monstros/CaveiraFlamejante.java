@@ -11,27 +11,4 @@ public class CaveiraFlamejante extends Monstros{
         this.modificadorAtaque = 3;
     }
 
-    @Override
-    public void ataque() {
-        int dado = numeroAleatorio();
-        if(numeroAleatorio()>10){
-            System.err.println("Caveira flamejante usa raio de fogo");
-            if( dado > 18){
-                System.out.println("ACERTO CRITICO! Dano causado: "+(danoAtaque*2+(numeroAleatorio()%modificadorAtaque)));
-            }else if (dado > 8){
-                System.out.println("ACERTO! Dano causado:"+(danoAtaque+(numeroAleatorio()%modificadorAtaque)));
-            }else{
-                System.out.println("ERROU!");
-            }
-        }else{
-            System.err.println("Caveira flamejante usa bola de fogo");
-            if( dado > 18){
-                System.out.println("ACERTO CRITICO! Dano causado: "+(danoAtaque*1.5+(numeroAleatorio()%modificadorAtaque)));
-            }else if (dado > 8){
-                System.out.println("ACERTO! Dano causado:"+(danoAtaque+(numeroAleatorio()%modificadorAtaque-1)));
-            }else{
-                System.out.println("ERROU!");
-            }
-        }
-    }
 }

@@ -12,29 +12,5 @@ public class Aboleth  extends Monstros {
         this.nivelMonstro = 1;
         this.modificadorAtaque = 6;
     }
-
-    @Override
-    public void ataque(Personagem personagem) {
-        int dado = numeroAleatorio();
-        if(numeroAleatorio()>10){
-            System.out.println("Aboleth usa ataque mental");
-            if( dado > 18){
-                System.out.println("ACERTO CRITICO! Perde o proxima rodada,Dano causado: "+(danoAtaque*2+(numeroAleatorio()%modificadorAtaque)));
-            } else if (dado > 8) {
-                System.out.println("ACERTO! Dano causado:"+(danoAtaque+(numeroAleatorio()%modificadorAtaque)));
-            } else {
-                System.out.println("ERROU!");
-            } 
-        }else{
-            System.out.println("Aboleth usa ataque brutal de tentaculos");
-            if( dado > 18){
-                System.out.println("ACERTO CRITICO! Dano causado: "+(danoAtaque*1.5+(numeroAleatorio()%modificadorAtaque)));
-            } else if (dado > 8) {
-                System.out.println("ACERTO! Dano causado:"+(danoAtaque+(numeroAleatorio()%modificadorAtaque-1)));
-            } else {
-                System.out.println("ERROU!");
-            }
-        }
-    }
     
 }
