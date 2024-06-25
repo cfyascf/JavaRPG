@@ -1,13 +1,15 @@
 package jogo.Itens.ItensGuerreiro;
 
+import CombateEPersonagem.Itens.Item;
 import jogo.personagens.herois.Personagem;
 
-public class ArmaduraCouro implements ItemGuerreiro
+public class ArmaduraCouro extends Item
 {
     private int aumentoDefesa;
 
     public ArmaduraCouro()
     {
+        super(null)
         this.aumentoDefesa = 2;
     }
 
