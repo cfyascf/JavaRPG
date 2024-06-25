@@ -2,7 +2,7 @@ package jogo.Itens.ItensGuerreiro;
 
 import jogo.personagens.herois.Personagem;
 
-public class EspadaLendaria implements ItemGuerreiro
+public class EspadaLendaria extends ItemGuerreiro
 {
     private int aumentoModAtaque;
     private int aumentoDano;

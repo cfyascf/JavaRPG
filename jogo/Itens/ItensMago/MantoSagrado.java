@@ -2,7 +2,7 @@ package jogo.Itens.ItensMago;
 
 import jogo.personagens.herois.Personagem;
 
-public class MantoSagrado implements ItemMago
+public class MantoSagrado extends ItemMago
 {
     private int aumentoDefesa;
 

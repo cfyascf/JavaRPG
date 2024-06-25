@@ -6,7 +6,7 @@ import jogo.personagens.herois.Personagem;
 
 public class Quest {
     List<Levels> levels;
-    Personagem personagem;
+    protected Personagem personagem;
 
     public Quest(List<Levels> niveisQuest, Personagem personagem) {
         levels = niveisQuest;
@@ -15,7 +15,7 @@ public class Quest {
 
     public void start() {
         for (Levels level : levels) {
-            while (level.proximaAcao());
+            while (level.proximaAcao(personagem));
         }
     }
 }

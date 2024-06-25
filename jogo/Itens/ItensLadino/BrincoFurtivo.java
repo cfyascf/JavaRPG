@@ -2,7 +2,7 @@ package jogo.Itens.ItensLadino;
 
 import jogo.personagens.herois.Personagem;
 
-public class BrincoFurtivo implements ItemLadino
+public class BrincoFurtivo extends ItemLadino
 {
     private int aumentoDefesa;
 

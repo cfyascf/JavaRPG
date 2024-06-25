@@ -3,19 +3,18 @@ package jogo.quests;
 
 import jogo.combate.Combate;
 import jogo.personagens.herois.Personagem;
+import jogo.personagens.monstros.Monstros;
 
 public class AcoesCombate implements AcoesLevel {
-    Personagem inimigo, player;
+    Monstros monstro;
 
-    public AcoesCombate(Personagem inimigo, Personagem player) {
-        this.inimigo = inimigo;
-        this.player = player;
+    public AcoesCombate(Monstros inimigo) {
+        this.monstro = inimigo;
     }
 
     @Override
     public void executar(Personagem personagem) {
-        Combate combate = new Combate();
-        combate.round(personagem, null);
+        new Combate().iniciarCombate(personagem, monstro);
     }
     
 }

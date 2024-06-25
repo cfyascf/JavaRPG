@@ -2,7 +2,7 @@ package jogo.Itens.ItensLadino;
 
 import jogo.personagens.herois.Personagem;
 
-public class CapaSombria implements ItemLadino
+public class CapaSombria extends ItemLadino
 {
     private int aumentoDefesa;
 

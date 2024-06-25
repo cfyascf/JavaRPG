@@ -1,10 +1,8 @@
 package jogo.personagens.monstros;
 
-import jogo.personagens.herois.Personagem;
-
 public class Aboleth  extends Monstros {
 
-    Aboleth(){
+    public Aboleth(){
         this.descricao = "Considerados deuses no lago, os Aboleths já tiveram controle sobre muitas criaturas vivas antes que os “verdadeiros deuses” destruíssem seu império.Agora, esses longos anfíbios estão querendo se vingar.";
         this.danoAtaque = 5;
         this.vidaMonstro = 20;

@@ -2,9 +2,9 @@ package jogo.Itens;
 
 import jogo.personagens.herois.Personagem;
 
-public class PocaoGrande implements Item
+public class PocaoGrande extends Pocao
 {
-    private int aumentoVida = 4;
+    public int aumentoVida = 4;
 
     @Override
     public void Usar(Personagem usuario)

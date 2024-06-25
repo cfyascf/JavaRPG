@@ -2,7 +2,7 @@ package jogo.Itens.ItensLadino;
 
 import jogo.personagens.herois.Personagem;
 
-public class FacaArremesso implements ItemLadino
+public class FacaArremesso extends ItemLadino
 {
     private int aumentoModAtaque;
     private int aumentoDano;

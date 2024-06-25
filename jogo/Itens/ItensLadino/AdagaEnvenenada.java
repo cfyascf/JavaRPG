@@ -2,7 +2,7 @@ package jogo.Itens.ItensLadino;
 
 import jogo.personagens.herois.Personagem;
 
-public class AdagaEnvenenada implements ItemLadino
+public class AdagaEnvenenada extends ItemLadino
 {
     private int aumentoModAtaque;
     private int aumentoDano;

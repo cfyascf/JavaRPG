@@ -2,7 +2,7 @@ package jogo.Itens.ItensMago;
 
 import jogo.personagens.herois.Personagem;
 
-public class AmuletoGelo  implements ItemMago
+public class AmuletoGelo  extends ItemMago
 {
     private int aumentoDefesa;
 

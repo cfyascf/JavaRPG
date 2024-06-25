@@ -1,28 +1,47 @@
-package CombateEPersonagem;
-import CombateEPersonagem.Itens.Item;
-import CombateEPersonagem.Itens.Pocao;
+package jogo.personagens.herois;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 import jogo.Itens.Item;
+import jogo.Itens.Pocao;
 import jogo.personagens.monstros.Monstros;
 
 public class Personagem {
    
     String nomePersonagem;
+   
     int nivelPersonagem = 1;
-    public int vidaPersonagem = 10;
+    int vidaPersonagem = 10;
     int modificadorAtaquePersonagem = 2;
     int classeDeArmaduraPersonagem = 15;
     int danoPersonagem;
+
     protected String fraseSuprema;
 
-    List<Item> listaDeItens = new ArrayList<>();
+    public List<Item> listaDeItens = new ArrayList<>();
     
     public Personagem(String nome) {
         this.nomePersonagem = nome;
+    }
+
+    public void curarPersonagem() {
+        boolean contemPocao = listaDeItens.stream().anyMatch(x -> x instanceof Pocao);
+
+        if (!contemPocao) {
+            System.out.println("Voce nao possui nenhuma poção de cura!");
+            return;
+        }
+
+        System.out.println("Poção utilizada com sucesso!");
+        
+        listaDeItens
+            .stream()
+            .filter(x -> x instanceof Pocao)
+            .findFirst()
+            .get()
+            .Usar(this);
     }
 
     public void pickItem(Item item) {
@@ -74,6 +93,14 @@ public class Personagem {
     protected static int numeroAleatorio(){
         Random numeroAleatorio = new Random();
         return numeroAleatorio.nextInt(20) + 1;
+    }
+
+    public String getNomePersonagem() {
+        return nomePersonagem;
+    }
+
+    public void setNomePersonagem(String nomePersonagem) {
+        this.nomePersonagem = nomePersonagem;
     }
 
 

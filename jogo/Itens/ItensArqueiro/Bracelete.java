@@ -2,7 +2,7 @@ package jogo.Itens.ItensArqueiro;
 
 import jogo.personagens.herois.Personagem;
 
-public class Bracelete implements ItemArqueiro
+public class Bracelete extends ItemArqueiro
 {
     private int aumentoDefesa = 4;
 

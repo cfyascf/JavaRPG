@@ -4,7 +4,7 @@ import jogo.personagens.herois.Personagem;
 
 public class Pocao implements Item
 {
-    private int aumentoVida = 2;
+    public int aumentoVida = 2;
 
     @Override
     public void Usar(Personagem usuario)

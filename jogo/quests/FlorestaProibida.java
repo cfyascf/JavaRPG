@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import jogo.personagens.herois.Personagem;
+import jogo.personagens.monstros.*;
 
 public class FlorestaProibida extends Quest {
     static List<Levels> levels = new ArrayList<>();
@@ -21,10 +22,13 @@ public class FlorestaProibida extends Quest {
                                        + "Quem sabe o que podemos encontrar lá dentro...", DialogoTipo.Personagem));
 
         acoesNivel1.add(new AcoesDialogo("Concordo. Vamos manter os olhos abertos "
-                                       + "e estar prontos para qualquer coisa.", DialogoTipo.Personagem));
+                                       + "e estar prontos para qualquer coisa.", DialogoTipo.NPC));
 
         acoesNivel1.add(new AcoesDialogo("Não temos medo de algumas árvores assustadoras, certo? "
                                        + "Vamos lá, temos um mistério para resolver!", DialogoTipo.Personagem));
+
+        // Combate do Nível 1: Encontro com o Dragão
+        acoesNivel1.add(new AcoesCombate(new Dragon()));
 
         Levels nivel1 = new Levels(acoesNivel1);
 
@@ -39,10 +43,13 @@ public class FlorestaProibida extends Quest {
                                        + "Precisamos descobrir por que estão tão fora de controle.", DialogoTipo.Personagem));
 
         acoesNivel2.add(new AcoesDialogo("Aquele acampamento abandonado parece ser um bom lugar "
-                                       + "para começar a procurar pistas. Vamos lá antes que escureça.", DialogoTipo.Personagem));
+                                       + "para começar a procurar pistas. Vamos lá antes que escureça.", DialogoTipo.NPC));
 
         acoesNivel2.add(new AcoesDialogo("Parece que não somos os únicos que querem descobrir "
                                        + "o que está acontecendo aqui. Melhor nos apressarmos.", DialogoTipo.Personagem));
+
+        // Combate do Nível 2: Encontro com a Banshee
+        acoesNivel2.add(new AcoesCombate(new Banshee()));
 
         Levels nivel2 = new Levels(acoesNivel2);
 
@@ -56,10 +63,13 @@ public class FlorestaProibida extends Quest {
         acoesNivel3.add(new AcoesDialogo("É aqui que tudo começou. Temos que acabar com isso de uma vez por todas.", DialogoTipo.Personagem));
 
         acoesNivel3.add(new AcoesDialogo("Preparem-se. Não sabemos o que podemos enfrentar aqui dentro, "
-                                       + "mas não podemos recuar agora.", DialogoTipo.Personagem));
+                                       + "mas não podemos recuar agora.", DialogoTipo.NPC));
 
         acoesNivel3.add(new AcoesDialogo("Esta é nossa última chance de purificar a floresta. "
                                        + "Vamos fazer isso pelos que não puderam voltar.", DialogoTipo.Personagem));
+
+        // Combate do Nível 3: Encontro com o Aboleth
+        acoesNivel3.add(new AcoesCombate(new Aboleth()));
 
         Levels nivel3 = new Levels(acoesNivel3);
 
@@ -68,7 +78,7 @@ public class FlorestaProibida extends Quest {
         levels.add(nivel3);
     }
 
-    public FlorestaProibida(List<Levels> niveisQuest, Personagem personagem) {
-        super(niveisQuest, personagem);
+    public FlorestaProibida(Personagem personagem) {
+        super(levels, personagem);
     }
 }

@@ -2,7 +2,7 @@ package jogo.Itens.ItensArqueiro;
 
 import jogo.personagens.herois.Personagem;
 
-public class Elmo implements ItemArqueiro
+public class Elmo extends ItemArqueiro
 {
     private int aumentoDefesa;
 

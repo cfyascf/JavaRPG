@@ -2,7 +2,7 @@ package jogo.Itens.ItensMago;
 
 import jogo.personagens.herois.Personagem;
 
-public class CajadoMagico implements ItemMago
+public class CajadoMagico extends ItemMago
 {
     private int aumentoModAtaque;
     private int aumentoDano;

@@ -3,7 +3,7 @@ package jogo.personagens.monstros;
 
 public class Dragon extends Monstros{
 
-    Dragon(){
+    public Dragon(){
         this.descricao ="Dragão são figuras lendárias, representadas por grandes répteis monstruosos que possuem a capacidade de voar e soltar fogo pela boca.";
         this.danoAtaque = 7;
         this.vidaMonstro = 20;

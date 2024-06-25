@@ -1,8 +1,10 @@
 package jogo.Itens.ItensArqueiro;
 
+import java.util.List;
+
 import jogo.personagens.herois.Personagem;
 
-public class ArcoEncantado implements ItemArqueiro
+public class ArcoEncantado extends ItemArqueiro
 {
     private int aumentoModAtaque = 2;
     private int aumentoDano = 2;

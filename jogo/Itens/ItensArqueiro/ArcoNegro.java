@@ -2,7 +2,7 @@ package jogo.Itens.ItensArqueiro;
 
 import jogo.personagens.herois.Personagem;
 
-public class ArcoNegro implements ItemArqueiro
+public class ArcoNegro extends ItemArqueiro
 {
     private int aumentoModAtaque = 1;
     private int aumentoDano = 1;

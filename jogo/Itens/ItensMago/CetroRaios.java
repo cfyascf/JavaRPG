@@ -2,7 +2,7 @@ package jogo.Itens.ItensMago;
 
 import jogo.personagens.herois.Personagem;
 
-public class CetroRaios implements ItemMago
+public class CetroRaios extends ItemMago
 {
     private int aumentoModAtaque;
     private int aumentoDano;

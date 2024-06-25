@@ -2,7 +2,7 @@ package jogo.Itens.ItensGuerreiro;
 
 import jogo.personagens.herois.Personagem;
 
-public class ArmaduraPesada implements ItemGuerreiro
+public class ArmaduraPesada extends ItemGuerreiro
 {
     private int aumentoDefesa;
 

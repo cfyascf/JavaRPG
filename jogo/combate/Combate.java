@@ -11,12 +11,12 @@ public class Combate {
     static int cargaSuprema = 0;
     static Scanner scanner = new Scanner(System.in);
 
-    public static void iniciarCombate(Personagem personagem, Monstros inimigo) {
+    public void iniciarCombate(Personagem personagem, Monstros inimigo) {
         cargaSuprema = 0;
         while(personagem.getVidaPersonagem() > 0 && inimigo.getVidaMonstro() > 0) {
             
             if(round % 2 == 0){
-                System.out.println("Vida "+ personagem.nomePersonagem +": "+ personagem.getVidaPersonagem());
+                System.out.println("Vida "+ personagem.getNomePersonagem() +": "+ personagem.getVidaPersonagem());
                 System.out.println("Carga da suprema: "+cargaSuprema);
 
                 System.out.println();
@@ -53,12 +53,11 @@ public class Combate {
                         }
 
                     case 3:
-                        /*System.out.println("Você escolheu Curar!");
+                        System.out.println("Você escolheu Curar!");
                         
-                        personagem.curarPersonagem(personagem);
+                        personagem.curarPersonagem();
                         round++;
 
-                         */
                         break;
                     case 4:
                         System.out.println("Você escolheu Fugir!");
