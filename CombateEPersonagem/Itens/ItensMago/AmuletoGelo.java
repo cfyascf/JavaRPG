@@ -1,18 +1,18 @@
 package CombateEPersonagem.Itens;
 
-public class MantoSagrado extends Item
+public class AmuletoGelo extends Item
 {
     private int aumentoDefesa;
 
-    public MantoSagrado()
+    public AmuletoGelo()
     {
-        this.aumentoDefesa = 2;
+        this.aumentoDefesa = 4;
     }
 
     @Override
     public void Usar(Personagem usuario)
     {
         usuario.classeDeArmaduraPersonagem += this.aumentoDefesa;
-        System.out.println("Ele se cobre com um manto sagrado, sua defesa aumentou um pouco.");
+        System.out.println("Ele equipa um amuleto de gelo, sua defesa aumentou consideravelmente.");
     }
 }

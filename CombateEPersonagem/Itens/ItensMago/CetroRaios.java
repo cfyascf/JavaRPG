@@ -1,14 +1,14 @@
 package CombateEPersonagem.Itens;
 
-public class CajadoMagico extends Item
+public class CetroRaios extends Item
 {
     private int aumentoModAtaque;
     private int aumentoDano;
 
-    public CajadoMagico()
+    public CetroRaios()
     {
-        this.aumentoModAtaque = 2;
-        this.aumentoDano = 2;
+        this.aumentoModAtaque = 4;
+        this.aumentoDano = 4;
     }
 
     @Override
@@ -16,6 +16,6 @@ public class CajadoMagico extends Item
     {
         usuario.modificadorAtaquePersonagem += this.aumentoModAtaque;
         usuario.danoPersonagem += this.aumentoDano;
-        System.out.println("Ele empunha seu cajado mágico, com isso, seu ataque aumenta um pouco.");
+        System.out.println("Ele conjura um cetro de raios, com isso, seu ataque aumenta consideravelmente.");
     }
 }

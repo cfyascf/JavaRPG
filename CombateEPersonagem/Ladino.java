@@ -7,6 +7,7 @@ public class Ladino extends Personagem {
         this.itens.add(new CapaSombria());
         this.itens.add(new FacaArremesso());
     }
+    
     public void Suprema(inimigo){
         int ataque = numeroAleatorio() + getModificadorAtaquePersonagem() + 2;
 
