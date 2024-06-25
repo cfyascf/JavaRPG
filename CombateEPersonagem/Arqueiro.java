@@ -1,7 +1,14 @@
 package CombateEPersonagem;
 
 public class Arqueiro extends Personagem{
-    //lista de itens arqueiro
+    public Arqueiro()
+    {
+        this.itens.add(new ArcoEncantado());
+        this.itens.add(new ArcoNegro());
+        this.itens.add(new Elmo());
+        this.itens.add(new Bracelete());
+    }
+
     public void Suprema(inimigo){
         int ataque = numeroAleatorio() + getModificadorAtaquePersonagem() + 2;
 

@@ -8,7 +8,7 @@ public class Personagem {
     int modificadorAtaquePersonagem = 2;
     int classeDeArmaduraPersonagem = 15;
     int danoPersonagem;
-    //lista itens
+    List<Item> itens = new ArrayList<>();
     
     public Personagem() {
     }

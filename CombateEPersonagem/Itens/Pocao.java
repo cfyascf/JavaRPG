@@ -6,14 +6,13 @@ public class Pocao extends Item
 
     public Pocao()
     {
-        super(new Personagem());
         this.aumentoVida = 2;
     }
 
     @Override
     public void Usar(Personagem usuario)
     {
-            usuario.vidaPersonagem += aumentoVida;
-            System.out.println("Item utilizado com sucesso");
+        usuario.vidaPersonagem += aumentoVida;
+        System.out.println("Item utilizado com sucesso");
     }
 }
