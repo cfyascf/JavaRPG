@@ -118,32 +118,27 @@ public class App {
         System.out.println("[3] Ladino");
         System.out.println("[4] Arqueiro");
         int opcao = Integer.parseInt(scan.nextLine());
-        String classe = "";
 
         Utilidades.skipLine();
 
         if(opcao == 1) {
 
             Utilidades.printf("mago", digitTime);
-            classe = "mago";
             personagem = new Mago(nome);
 
         } else if(opcao == 2) {
 
             Utilidades.printf("guerreiro", digitTime);
-            classe = "guerreiro";
             personagem = new Guerreiro(nome);
 
         } else if(opcao == 3) {
 
             Utilidades.printf("ladino", digitTime);
-            classe = "ladino";
             personagem = new Ladino(nome);
 
         } else if(opcao == 4) {
 
             Utilidades.printf("arqueiro", digitTime);
-            classe = "arqueiro";
             personagem = new Arqueiro(nome);
 
         }

@@ -1,13 +1,8 @@
 package jogo.raids;
 
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-import java.util.ServiceLoader;
-
-import javax.swing.text.html.parser.Element;
 
 import jogo.Itens.Item;
 import jogo.Itens.ItensArqueiro.ArcoEncantado;

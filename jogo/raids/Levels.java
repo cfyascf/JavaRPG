@@ -4,7 +4,6 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 import jogo.personagens.herois.Personagem;
-import jogo.ui.Utilidades;
 
 
 public class Levels {

@@ -3,7 +3,6 @@ package jogo;
 import java.util.List;
 import java.util.Random;
 
-import jogo.Itens.Item;
 import jogo.personagens.herois.Personagem;
 import jogo.raids.Quest;
 import jogo.raids.quests.CidadeAssombrada;

@@ -1,6 +1,5 @@
 package jogo.raids;
 
-import java.util.Random;
 
 import jogo.personagens.herois.Personagem;
 import jogo.ui.Utilidades;

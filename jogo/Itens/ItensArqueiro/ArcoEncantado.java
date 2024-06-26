@@ -1,6 +1,5 @@
 package jogo.Itens.ItensArqueiro;
 
-import java.util.List;
 
 import jogo.personagens.herois.Personagem;
 

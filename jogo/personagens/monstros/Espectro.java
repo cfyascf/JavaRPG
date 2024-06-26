@@ -1,6 +1,5 @@
 package jogo.personagens.monstros;
 
-import jogo.personagens.monstros.Monstros;
 
 public class Espectro extends Monstros {
     public Espectro() {

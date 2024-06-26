@@ -1,6 +1,5 @@
 package jogo.personagens.monstros;
 
-import jogo.personagens.monstros.Monstros;
 
 public class DragaoAnciao extends Monstros {
     public DragaoAnciao() {
