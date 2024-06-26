@@ -1,8 +1,9 @@
-package jogo.quests;
+package jogo.raids;
 
 import java.util.Random;
 
 import jogo.personagens.herois.Personagem;
+import jogo.ui.Utilidades;
 
 public class AcoesDialogo implements AcoesLevel {
     DialogoRecord dialogo;
@@ -15,20 +16,21 @@ public class AcoesDialogo implements AcoesLevel {
     public void executar(Personagem personagem) {
         switch (dialogo.tipo()) {
             case Narrador:
-                System.out.println("Narrador: " + dialogo.texto());
+                Utilidades.printf("Narrador: ", 0.07);
+                Utilidades.printf(dialogo.texto(), 0.03);
+                Utilidades.skipLine();
                 break;
             
             case Personagem:
-                Random rd = new Random();
-                
-                //Escolher personagem aleatorio para falar
-                rd.nextInt(0, 0);
-                
-                System.out.println("Nome personagem: " + dialogo.texto());
+                Utilidades.printf(personagem.getNomePersonagem() + ": ", 0.07);
+                Utilidades.printf(dialogo.texto(), 0.03);
+                Utilidades.skipLine();
                 break;
             
             case NPC:
-                System.out.println(dialogo.texto());
+                Utilidades.printf("NPC: ", 0.07);
+                Utilidades.printf(dialogo.texto(), 0.03);
+                Utilidades.skipLine();
                 break;
         }
     }

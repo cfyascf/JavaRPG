@@ -17,4 +17,9 @@ public class Elmo extends ItemArqueiro
         usuario.setClasseDeArmaduraPersonagem(aumentoDefesa + usuario.getClasseDeArmaduraPersonagem());        
         System.out.println("Elmo de visão aguçada equipado, defesa aumentou sem prejudicar sua acurácia.");
     }
+
+    @Override
+    public String getNome() {
+        return "Elmo";
+    }
 }

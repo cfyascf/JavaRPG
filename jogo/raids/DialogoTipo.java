@@ -1,4 +1,4 @@
-package jogo.quests;
+package jogo.raids;
 
 public enum DialogoTipo {
     Narrador, Personagem, NPC

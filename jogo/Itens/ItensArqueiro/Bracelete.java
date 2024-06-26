@@ -12,4 +12,11 @@ public class Bracelete extends ItemArqueiro
         usuario.setClasseDeArmaduraPersonagem(aumentoDefesa + usuario.getClasseDeArmaduraPersonagem());        
         System.out.println("Bracelete de proteção equipado, defesa aumentou consideravelmente.");
     }
+
+    @Override
+    public String getNome() {
+        return "Bracelete";
+    }
+
+    
 }

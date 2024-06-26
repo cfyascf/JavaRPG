@@ -1,4 +1,4 @@
-package jogo.quests;
+package jogo.raids.quests;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -6,6 +6,7 @@ import java.util.List;
 
 import jogo.personagens.herois.Personagem;
 import jogo.personagens.monstros.*;
+import jogo.raids.*;
 
 public class RuinaAntiga extends Quest {
     static List<Levels> levels = new ArrayList<>();
@@ -20,6 +21,7 @@ public class RuinaAntiga extends Quest {
 
         // Combate do Nível 1: Encontro com Guardiões das Ruínas
         acoesNivel1.add(new AcoesCombate(new GuardiaoAntigo()));
+        acoesNivel1.add(new AcoesItem());
         acoesNivel1.add(new AcoesDialogo("Os Guardiões das Ruínas despertam para proteger seu território sagrado.", DialogoTipo.Narrador));
         acoesNivel1.add(new AcoesDialogo("Derrotamos os Guardiões, mas devemos proceder com cautela nas profundezas das ruínas.", DialogoTipo.Personagem));
 
@@ -34,6 +36,8 @@ public class RuinaAntiga extends Quest {
 
         // Combate do Nível 2: Encontro com Espectros das Ruínas
         acoesNivel2.add(new AcoesCombate(new Espectro()));
+        acoesNivel2.add(new AcoesItem());
+        acoesNivel1.add(new AcoesDialogo("Os Guardiões das Ruínas despertam para proteger seu território sagrado.", DialogoTipo.Narrador));
         acoesNivel2.add(new AcoesDialogo("Os Espectros das Ruínas emergem das sombras, sedentos por vingança.", DialogoTipo.Narrador));
         acoesNivel2.add(new AcoesDialogo("Vencemos os Espectros, mas a maldição das ruínas ainda persiste.", DialogoTipo.Personagem));
 
@@ -50,6 +54,7 @@ public class RuinaAntiga extends Quest {
         acoesNivel3.add(new AcoesDialogo("Uma presença sombria emerge das sombras das ruínas, revelando a Banshee, uma alma amaldiçoada em busca de vingança.", DialogoTipo.Narrador));
         acoesNivel3.add(new AcoesDialogo("Para derrotar a Banshee, precisamos usar nossa coragem e determinação para enfrentar seu poder místico.", DialogoTipo.Personagem));
         acoesNivel3.add(new AcoesCombate(new Banshee()));
+        acoesNivel3.add(new AcoesItem());
 
         Levels nivel3 = new Levels(acoesNivel3);
 
@@ -63,6 +68,7 @@ public class RuinaAntiga extends Quest {
         // Combate do Nível 4: Batalha Final com o Dragão Ancião
         acoesNivel4.add(new AcoesDialogo("A batalha com o Dragão Ancião será a prova final de nossa coragem e determinação.", DialogoTipo.Personagem));
         acoesNivel4.add(new AcoesCombate(new DragaoAnciao()));
+        acoesNivel4.add(new AcoesItem());
 
         Levels nivel4 = new Levels(acoesNivel4);
 

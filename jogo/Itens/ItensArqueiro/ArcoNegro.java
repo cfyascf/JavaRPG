@@ -15,4 +15,9 @@ public class ArcoNegro extends ItemArqueiro
         
         System.out.println("Arco negro foi equipado, o dano aumentou um pouco.");
     }
+
+    @Override
+    public String getNome() {
+        return "Arco Negro";
+    }
 }

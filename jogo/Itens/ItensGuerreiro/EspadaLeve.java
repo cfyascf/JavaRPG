@@ -20,4 +20,8 @@ public class EspadaLeve extends ItemGuerreiro
         usuario.setDanoPersonagem(aumentoDano + usuario.getDanoPersonagem());
         System.out.println("Ele empunha uma espada leve, seu dano aumentou um pouco.");
     }
+    @Override
+    public String getNome() {
+        return "Espada Leve";
+    }
 }

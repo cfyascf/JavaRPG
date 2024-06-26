@@ -1,6 +1,7 @@
 package jogo.Itens;
 
 import jogo.personagens.herois.Personagem;
+import jogo.ui.Utilidades;
 
 public class PocaoGrande extends Pocao
 {
@@ -10,6 +11,11 @@ public class PocaoGrande extends Pocao
     public void Usar(Personagem usuario)
     {
         usuario.setVidaPersonagem(usuario.getVidaPersonagem() + aumentoVida);
-        System.out.println("Ele tomou uma poção grande, muita energia foi recuperada.");
+        Utilidades.printf("Ele tomou uma poção grande, muita energia foi recuperada.\n", 0.05);
+    }
+
+    @Override
+    public String getNome() {
+        return "Pocao Grande";
     }
 }

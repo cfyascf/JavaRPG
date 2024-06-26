@@ -17,4 +17,8 @@ public class MantoSagrado extends ItemMago
         usuario.setClasseDeArmaduraPersonagem(aumentoDefesa + usuario.getClasseDeArmaduraPersonagem());        
         System.out.println("Ele se cobre com um manto sagrado, sua defesa aumentou um pouco.");
     }
+    @Override
+    public String getNome() {
+        return "Manto Sagrado";
+    }
 }

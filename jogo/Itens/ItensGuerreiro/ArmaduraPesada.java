@@ -17,4 +17,9 @@ public class ArmaduraPesada extends ItemGuerreiro
         usuario.setClasseDeArmaduraPersonagem(aumentoDefesa + usuario.getClasseDeArmaduraPersonagem());        
         System.out.println("Armadura pesada foi equipada, defesa aumentou consideravelmente.");
     }
+
+    @Override
+    public String getNome() {
+        return "Armadura Pesada";
+    }
 }

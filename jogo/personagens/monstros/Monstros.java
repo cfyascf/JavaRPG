@@ -3,6 +3,7 @@ package jogo.personagens.monstros;
 import java.util.Random;
 
 import jogo.personagens.herois.Personagem;
+import jogo.ui.Utilidades;
 
 public abstract class Monstros {
     protected int nivelMonstro;
@@ -46,18 +47,26 @@ public abstract class Monstros {
 
     public void ataque(Personagem personagem){
         int numeroAleatorioAtaque = numeroAleatorio();
-        int vidaPerdida;
+        int dano;
+        int vidaPersonagem = personagem.getVidaPersonagem();
+
         if(numeroAleatorioAtaque == 20){
-            vidaPerdida = personagem.getVidaPersonagem()- (danoAtaque * 2);
-            personagem.setVidaPersonagem(vidaPerdida);
+            dano = (danoAtaque * 2);
+            vidaPersonagem -= dano;
+
+            personagem.setVidaPersonagem(vidaPersonagem);
+
             System.out.println("ATAQUE CRÍTICO!");
-            System.out.println("O inimigo toma "+ vidaPerdida+" de dano!");
+            Utilidades.printf(String.format("%s tomou %d de dano!\n", personagem.getNomePersonagem(), dano), 0.06);
         }
         else if((numeroAleatorioAtaque + modificadorAtaque) > personagem.getClasseDeArmaduraPersonagem()){
-            vidaPerdida = personagem.getVidaPersonagem() - danoAtaque;
-            personagem.setVidaPersonagem(vidaPerdida);
+            dano = danoAtaque;
+            vidaPersonagem -= dano;
+
+            personagem.setVidaPersonagem(vidaPersonagem);
+
             System.out.println("ACERTO!");
-            System.out.println("O inimigo toma "+ vidaPerdida+" de dano!");
+            Utilidades.printf(String.format("%s tomou %d de dano!\n", personagem.getNomePersonagem(), dano), 0.06);
         }
         else {
             System.out.println("ERROU!");

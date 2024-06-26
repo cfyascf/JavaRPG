@@ -1,4 +1,4 @@
-package jogo.quests;
+package jogo.raids.quests;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -6,6 +6,7 @@ import java.util.List;
 
 import jogo.personagens.herois.Personagem;
 import jogo.personagens.monstros.*;
+import jogo.raids.*;
 
 public class ReinoSubmerso extends Quest {
     static List<Levels> levels = new ArrayList<>();
@@ -21,6 +22,7 @@ public class ReinoSubmerso extends Quest {
 
         // Combate do Nível 1: Encontro com Tritões
         acoesNivel1.add(new AcoesCombate(new Tritao()));
+        acoesNivel1.add(new AcoesItem());
         acoesNivel1.add(new AcoesDialogo("Os Tritões atacam com ferocidade, protegendo suas terras ancestrais.", DialogoTipo.Narrador));
         acoesNivel1.add(new AcoesDialogo("Derrotamos os Tritões, mas devemos prosseguir com cautela nas profundezas desconhecidas.", DialogoTipo.Personagem));
 
@@ -53,6 +55,7 @@ public class ReinoSubmerso extends Quest {
         acoesNivel3.add(new AcoesCombate(new Sereia()));
         acoesNivel3.add(new AcoesDialogo("A Sereia emerge das profundezas, sua canção hipnotizadora ecoa através dos corredores das ruínas submersas.", DialogoTipo.Narrador));
         acoesNivel3.add(new AcoesDialogo("A Sereia foi derrotada, mas a luta contra o Leviatã ainda está por vir.", DialogoTipo.Personagem));
+        acoesNivel3.add(new AcoesItem());
 
         Levels nivel3 = new Levels(acoesNivel3);
 

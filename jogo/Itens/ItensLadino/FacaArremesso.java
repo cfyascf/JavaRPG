@@ -21,4 +21,8 @@ public class FacaArremesso extends ItemLadino
         
         System.out.println("Ele obtém facas de arremesso, seu dano aumentou.");
     }
+    @Override
+    public String getNome() {
+        return "Faca de Arremesso";
+    }
 }

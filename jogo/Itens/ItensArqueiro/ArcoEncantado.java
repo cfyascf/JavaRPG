@@ -17,4 +17,9 @@ public class ArcoEncantado extends ItemArqueiro
         
         System.out.println("Arco encantado foi equipado, o dano aumentou consideravelmente.");
     }
+
+    @Override
+    public String getNome() {
+        return "Arco Encantado";
+    }
 }

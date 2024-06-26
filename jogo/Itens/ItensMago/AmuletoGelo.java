@@ -18,4 +18,8 @@ public class AmuletoGelo  extends ItemMago
 
         System.out.println("Ele equipa um amuleto de gelo, sua defesa aumentou consideravelmente.");
     }
+    @Override
+    public String getNome() {
+        return "Amuleto de Gelo";
+    }
 }

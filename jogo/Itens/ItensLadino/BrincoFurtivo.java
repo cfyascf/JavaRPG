@@ -18,4 +18,8 @@ public class BrincoFurtivo extends ItemLadino
 
         System.out.println("Ele equipa um brinco da furtividade, com isso sua defesa aumenta.");
     }
+    @Override
+    public String getNome() {
+        return "Brinco Furtivo";
+    }
 }

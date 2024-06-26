@@ -20,4 +20,8 @@ public class CetroRaios extends ItemMago
         usuario.setDanoPersonagem(aumentoDano + usuario.getDanoPersonagem());
         System.out.println("Ele conjura um cetro de raios, com isso, seu ataque aumenta consideravelmente.");
     }
+    @Override
+    public String getNome() {
+        return "Cetro de Raios";
+    }
 }

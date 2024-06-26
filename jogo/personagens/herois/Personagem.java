@@ -7,16 +7,17 @@ import java.util.Random;
 import jogo.Itens.Item;
 import jogo.Itens.Pocao;
 import jogo.personagens.monstros.Monstros;
+import jogo.ui.Utilidades;
 
 public class Personagem {
    
     String nomePersonagem;
    
     int nivelPersonagem = 1;
-    int vidaPersonagem = 10;
+    int vidaPersonagem = 30;
     int modificadorAtaquePersonagem = 2;
     int classeDeArmaduraPersonagem = 15;
-    int danoPersonagem;
+    int danoPersonagem = 8;
 
     protected String fraseSuprema;
 
@@ -44,12 +45,19 @@ public class Personagem {
             .Usar(this);
     }
 
-    public void pickItem(Item item) {
+    public void pickItem(Item item, boolean messages) {
         item.Usar(this);
         listaDeItens.add(item);
+
+        if (messages) {
+            Utilidades.printf("Voce ganhou o item " + item.getNome(), 0.05);
+            Utilidades.printf(" | Modificador de ataque: " + getModificadorAtaquePersonagem(), 0.03);
+            Utilidades.skipLine();
+        }
+
     }
     
-    public int getNivelPersonagem() {
+    public Integer getNivelPersonagem() {
         return nivelPersonagem;
     }
     
@@ -57,7 +65,7 @@ public class Personagem {
         this.nivelPersonagem = nivelPersonagem;
     }
     
-    public int getVidaPersonagem() {
+    public Integer getVidaPersonagem() {
         return vidaPersonagem;
     }
     
@@ -65,7 +73,7 @@ public class Personagem {
         this.vidaPersonagem = vidaPersonagem;
     }
     
-    public int getModificadorAtaquePersonagem() {
+    public Integer getModificadorAtaquePersonagem() {
         return modificadorAtaquePersonagem;
     }
     
@@ -73,7 +81,7 @@ public class Personagem {
         this.modificadorAtaquePersonagem = modificadorAtaquePersonagem;
     }
     
-    public int getClasseDeArmaduraPersonagem() {
+    public Integer getClasseDeArmaduraPersonagem() {
         return classeDeArmaduraPersonagem;
     }
     
@@ -81,7 +89,7 @@ public class Personagem {
         this.classeDeArmaduraPersonagem = classeDeArmaduraPersonagem;
     }
 
-    public int getDanoPersonagem() {
+    public Integer getDanoPersonagem() {
         return danoPersonagem;
     }  
 
@@ -114,21 +122,26 @@ public class Personagem {
     
     public void ataque(Monstros inimigo){
         int numeroAleatorioAtaque = numeroAleatorio();
-        int vidaPerdida;
-        
+        int dano;
+        int vidaInimigo = inimigo.getVidaMonstro();
+
         if(numeroAleatorioAtaque == 20){
-            vidaPerdida = inimigo.getVidaMonstro() - (danoPersonagem * 2);
-            inimigo.setVidaMonstro(vidaPerdida);
+            dano = danoPersonagem * 2;
+            vidaInimigo -= dano;
+
+            inimigo.setVidaMonstro(vidaInimigo);
 
             System.out.println("ATAQUE CRÍTICO!");
-            System.out.println("O inimigo toma "+ vidaPerdida+" de dano!");
+            Utilidades.printf("O inimigo toma " + dano + " de dano!\n", 0.06);
         }
         else if((numeroAleatorioAtaque + modificadorAtaquePersonagem) > inimigo.getArmaduraMostro()){
-            vidaPerdida = inimigo.getVidaMonstro() - danoPersonagem;
-            inimigo.setVidaMonstro(vidaPerdida);
+            dano = danoPersonagem;
+            vidaInimigo -= danoPersonagem;
+
+            inimigo.setVidaMonstro(vidaInimigo);
 
             System.out.println("ACERTO!");
-            System.out.println("O inimigo toma "+ vidaPerdida+" de dano!");
+            Utilidades.printf("O inimigo toma " + dano + " de dano!\n", 0.06);
         }
         else {
             System.out.println("ERROU!");
@@ -143,7 +156,7 @@ public class Personagem {
             inimigo.setVidaMonstro(getVidaPersonagem() - vidaPerdida);
 
             System.out.println("ACERTOU!");
-            System.out.println(fraseSuprema + " causando "+ vidaPerdida + " de dano!");
+            Utilidades.printf(fraseSuprema + " causando "+ (danoPersonagem*2) + " de dano!\n", 0.08);
         }
         else {
             System.out.println("ERROU!");

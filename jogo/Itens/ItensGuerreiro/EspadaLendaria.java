@@ -21,4 +21,9 @@ public class EspadaLendaria extends ItemGuerreiro
         
         System.out.println("Ele empunha a espada lendária, seu dano aumentou consideravelmente.");
     }
+
+    @Override
+    public String getNome() {
+        return "Espada Lendaria";
+    }
 }

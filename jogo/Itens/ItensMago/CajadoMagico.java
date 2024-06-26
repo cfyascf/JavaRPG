@@ -21,4 +21,8 @@ public class CajadoMagico extends ItemMago
 
         System.out.println("Ele empunha seu cajado mágico, com isso, seu ataque aumenta um pouco.");
     }
+    @Override
+    public String getNome() {
+        return "Cajado Magico";
+    }
 }

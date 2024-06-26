@@ -17,4 +17,9 @@ public class ArmaduraCouro extends ItemGuerreiro
         usuario.setClasseDeArmaduraPersonagem(aumentoDefesa + usuario.getClasseDeArmaduraPersonagem());        
         System.out.println("Armadura de couro leve foi equipada, defesa aumentou um pouco.");
     }
+
+    @Override
+    public String getNome() {
+        return "Armadura de Couro";
+    }
 }

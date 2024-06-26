@@ -1,9 +1,10 @@
-package jogo.quests;
+package jogo.raids;
 
 import java.util.Iterator;
 import java.util.LinkedList;
 
 import jogo.personagens.herois.Personagem;
+import jogo.ui.Utilidades;
 
 
 public class Levels {
@@ -17,6 +18,10 @@ public class Levels {
     }
 
     public boolean proximaAcao( Personagem personagem) {
+        if (personagem.getVidaPersonagem() <= 0) {
+            return false;
+        }
+
         if (!iterator.hasNext()) {
             return false;
         }

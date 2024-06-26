@@ -21,4 +21,8 @@ public class AdagaEnvenenada extends ItemLadino
 
         System.out.println("Ele equipa uma adaga envenenada, seu dano aumentou consideravelmente.");
     }
+    @Override
+    public String getNome() {
+        return "Adaga Envenenada";
+    }
 }

@@ -1,4 +1,4 @@
-package jogo.quests;
+package jogo.raids.quests;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -6,6 +6,7 @@ import java.util.List;
 
 import jogo.personagens.herois.Personagem;
 import jogo.personagens.monstros.*;
+import jogo.raids.*;
 
 public class FlorestaProibida extends Quest {
     static List<Levels> levels = new ArrayList<>();
@@ -30,6 +31,8 @@ public class FlorestaProibida extends Quest {
         // Combate do Nível 1: Encontro com o Dragão
         acoesNivel1.add(new AcoesCombate(new Dragon()));
 
+        acoesNivel1.add(new AcoesItem());
+
         Levels nivel1 = new Levels(acoesNivel1);
 
         LinkedList<AcoesLevel> acoesNivel2 = new LinkedList<>();
@@ -49,7 +52,9 @@ public class FlorestaProibida extends Quest {
                                        + "o que está acontecendo aqui. Melhor nos apressarmos.", DialogoTipo.Personagem));
 
         // Combate do Nível 2: Encontro com a Banshee
+        acoesNivel2.add(new AcoesItem());
         acoesNivel2.add(new AcoesCombate(new Banshee()));
+        acoesNivel2.add(new AcoesItem());
 
         Levels nivel2 = new Levels(acoesNivel2);
 
@@ -70,6 +75,7 @@ public class FlorestaProibida extends Quest {
 
         // Combate do Nível 3: Encontro com o Aboleth
         acoesNivel3.add(new AcoesCombate(new Aboleth()));
+        acoesNivel3.add(new AcoesItem());
 
         Levels nivel3 = new Levels(acoesNivel3);
 

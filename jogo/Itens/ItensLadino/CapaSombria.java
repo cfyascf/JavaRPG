@@ -18,4 +18,8 @@ public class CapaSombria extends ItemLadino
 
         System.out.println("Ele equipa uma capa sombria, com isso sua defesa aumenta consideravelmente.");
     }
+    @Override
+    public String getNome() {
+        return "Capa Sombria";
+    }
 }

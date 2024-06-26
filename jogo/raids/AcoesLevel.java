@@ -1,4 +1,4 @@
-package jogo.quests;
+package jogo.raids;
 
 import jogo.personagens.herois.Personagem;
 

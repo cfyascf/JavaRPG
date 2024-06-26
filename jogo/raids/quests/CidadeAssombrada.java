@@ -1,4 +1,4 @@
-package jogo.quests;
+package jogo.raids.quests;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -6,6 +6,7 @@ import java.util.List;
 
 import jogo.personagens.herois.Personagem;
 import jogo.personagens.monstros.*;
+import jogo.raids.*;
 
 public class CidadeAssombrada extends Quest {
     static List<Levels> levels = new ArrayList<>();
@@ -21,6 +22,7 @@ public class CidadeAssombrada extends Quest {
 
         // Combate do Nível 1: Encontro com o Dragão
         acoesNivel1.add(new AcoesCombate(new CaveiraFlamejante()));
+        acoesNivel1.add(new AcoesItem());
 
         Levels nivel1 = new Levels(acoesNivel1);
 
@@ -34,6 +36,7 @@ public class CidadeAssombrada extends Quest {
 
         // Combate do Nível 2: Encontro com a Banshee
         acoesNivel2.add(new AcoesCombate(new Banshee()));
+        acoesNivel2.add(new AcoesItem());
 
         Levels nivel2 = new Levels(acoesNivel2);
 
@@ -46,7 +49,9 @@ public class CidadeAssombrada extends Quest {
         acoesNivel3.add(new AcoesDialogo("Os moradores estão contando com nós para livrar a cidade dessa maldição. Não podemos falhar.", DialogoTipo.NPC));
 
         // Combate do Nível 3: Encontro com o Aboleth
+        acoesNivel3.add(new AcoesItem());
         acoesNivel3.add(new AcoesCombate(new Aboleth()));
+        acoesNivel3.add(new AcoesItem());
 
         Levels nivel3 = new Levels(acoesNivel3);
 
